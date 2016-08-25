@@ -1,0 +1,18 @@
+<!-- Start Footer -->
+<footer class="main-footer">
+    <div class="container-fluid">
+
+        <ul class="social">
+            {% if site.data.info.facebook %}<li><a href="{{ site.data.info.facebook }}"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>{% endif %}
+            {% if site.data.info.twitter %}<li><a href="{{ site.data.info.twitter }}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>{% endif %}
+            {% if site.data.info.instagram %}<li><a href="{{ site.data.info.instagram }}"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>{% endif %}
+            {% if site.data.info.youtube %}<li><a href="{{ site.data.info.youtube }}"><svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg></a></li>{% endif %}
+            {% if site.data.info.skype %}<li><a href="{{ site.data.info.skype }}"><svg class="icon icon-skype"><use xlink:href="#icon-skype"></use></svg></a></li>{% endif %}
+            {% if site.data.info.feed %}<li><a href="#"><svg class="icon icon-feed"><use xlink:href="#icon-feed"></use></svg></a></li>{% endif %}
+        </ul>
+
+        <small>{% if site.data.info.copyright %} {{ site.data.info.copyright }} {% endif %}</small>
+
+    </div>
+</footer>
+<!-- End Footer -->

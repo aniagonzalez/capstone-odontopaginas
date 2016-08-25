@@ -1,0 +1,12 @@
+<div class="col-sm-12 col-md-12 main">
+  <h2>Crea un nuevo sitio aquí:</h2>
+
+    <%= bootstrap_form_for(@site) do |f| %>
+
+    <%= f.text_field :title, label: "Título" %>
+    <%= f.text_area :description, label: "Descripción" %>
+
+    <%= f.submit "Crear sitio"%>
+    <% end %>
+
+</div>
