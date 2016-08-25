@@ -27,5 +27,5 @@ production:
 
   username: aniagr
   password: ania1806
-  host: aa1p1hqggi0qtx.cnewlxg0n3tm.us-west-2.rds.amazonaws.com
+  host: aa1spxqqbs5g4nc.cnewlxg0n3tm.us-west-2.rds.amazonaws.com
   port: 5432
