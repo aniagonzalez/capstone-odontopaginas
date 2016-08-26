@@ -1,0 +1,12 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <%= render "shared/submenu"%>
+  <h2 class="sub-header">Crear Sitio</h2>
+
+  <h4>El link para ver tu sitio:</h4>
+
+  <p><%= link_to @site.title, "https://s3-us-west-2.amazonaws.com/capstone-sites/site3", :target => "_blank"%></p>
+
+  <%= link_to "Construir sitio de nuevo", build_site_path, class:"btn btn-primary btn-lg active", role:"button"%>
+
+
+</div>

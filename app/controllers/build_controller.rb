@@ -5,7 +5,7 @@ class BuildController < ApplicationController
     # Rake::Task["jekyll:build"].invoke(params[:id])
     # Rake::Task["jekyll:build"].invoke(4)
     system ("rake jekyll:build[#{params[:id]}]")
-    render :show_json
+    render :site_link
   end
 
   def show_json
