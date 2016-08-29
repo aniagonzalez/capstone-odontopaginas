@@ -55,16 +55,16 @@ namespace :jekyll do
     puts "Building jekyll site"
     sh "cd themeA && jekyll build --destination ../built_sites"
     # sh "open built_sites/#{args[:id]}/index.html"
-    File.delete('./themeA/_data/gallery.json') if File.exist?('./themeA/_data/gallery.json')
-    File.delete('./themeA/_data/team.json') if File.exist?('./themeA/_data/team.json')
-    File.delete('./themeA/_data/testimonials.json') if File.exist?('./themeA/_data/testimonials.json')
-    File.delete('./themeA/_data/treatments.json') if File.exist?('./themeA/_data/treatments.json')
-    File.delete('./themeA/_data/info.json') if File.exist?('./themeA/_data/info.json')
+    # File.delete('./themeA/_data/gallery.json') if File.exist?('./themeA/_data/gallery.json')
+    # File.delete('./themeA/_data/team.json') if File.exist?('./themeA/_data/team.json')
+    # File.delete('./themeA/_data/testimonials.json') if File.exist?('./themeA/_data/testimonials.json')
+    # File.delete('./themeA/_data/treatments.json') if File.exist?('./themeA/_data/treatments.json')
+    # File.delete('./themeA/_data/info.json') if File.exist?('./themeA/_data/info.json')
 
     s3 = Aws::S3::Resource.new(region:'us-west-2')
     bucket = s3.bucket('capstone-sites').object("site#{args[:id]}")
     bucket.upload_file('./built_sites/index.html')
-    FileUtils.rm_rf('./built_sites')
+    # FileUtils.rm_rf('./built_sites')
     # https://s3-us-west-2.amazonaws.com/capstone-sites/site1
   end
 
