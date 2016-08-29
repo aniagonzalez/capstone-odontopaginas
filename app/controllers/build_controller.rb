@@ -23,23 +23,7 @@ class BuildController < ApplicationController
 
   def update_team_json
     @team_members = TeamMember.where(site_id: params[:id])
-    # @team_members_json = []
-    #
-    # @team_members.each do |team_member|
-    #   team_member_json = {
-    #   :name => team_member.name,
-    #   :image => team_member.image,
-    #   :email => team_member.email,
-    #   :phone => team_member.phone
-    #   }
-    # @team_members_json << team_member_json
-    # end
 
-
-    # # File.open("public/#{current_user.id}/#{@site.id}/team_member.json","w") do |f|
-    # File.open("public/#{current_user.id}-#{@site.id}-team_members.json","w") do |f|
-    #   f.write(@team_members_json.to_json)
-    # end
     @site = Site.find(params[:id])
     @json_datum = @site.json_datum
     @json_datum.update_attributes(team_json: @team_members.to_a)
