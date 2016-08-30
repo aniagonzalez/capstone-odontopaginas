@@ -22,6 +22,13 @@ namespace :jekyll do
     bucket.upload_file('./built_sites/1/css/main.css')
   end
 
+  desc 'upload TEST'
+  task :test do
+    s3 = Aws::S3::Resource.new(region:'us-west-2')
+    bucket = s3.bucket('capstone-sites').object('test.pdf')
+    bucket.upload_file('erd.pdf')
+  end
+
 
   desc 'upload ALL js'
   task :s3js do
